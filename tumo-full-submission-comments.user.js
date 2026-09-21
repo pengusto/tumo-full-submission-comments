@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name         TUMO Full Submission Comments
 // @namespace    https://activities.es.tumo.world/
-// @version      1.0.1
+// @version      1.0.2
+// @author       Pengusto
 // @description  Zeigt abgeschnittene Abgabe-Kommentare vollständig und mehrzeilig an.
 // @match        https://activities.es.tumo.world/dashboard/activities/examiner/*
 // @homepageURL  https://github.com/pengusto/tumo-full-submission-comments
