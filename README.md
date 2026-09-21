@@ -1,70 +1,95 @@
 # TUMO Full Submission Comments
 
-Ein kleines Userscript für den TUMO Activity Manager. Es zeigt abgeschnittene Kommentare unter hochgeladenen Dateien vollständig und mehrzeilig an.
+**English** | [Deutsch](docs/readme/README.de.md) | [Français](docs/readme/README.fr.md) | [日本語](docs/readme/README.ja.md) | [Հայերեն](docs/readme/README.hy.md)
 
-[Userscript installieren](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js)
+A small userscript for the TUMO Activity Manager. It displays truncated comments below uploaded files in full and wraps long text across multiple lines.
 
-## Was das Skript macht
+[Install the userscript](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js)
 
-- Es läuft nur auf Examiner-Seiten des Activity Managers.
-- Es ersetzt das einzeilige Kommentarfeld durch einen umbrechenden Textblock.
-- Es verändert keine Bewertung, kein Feedback und keine Abgabe.
-- Es sendet keine Daten und speichert nichts.
+## What the script does
+
+- Runs only on examiner pages in the Activity Manager.
+- Replaces the single-line comment field with a wrapping text block.
+- Does not change ratings, feedback, or submissions.
+- Sends no data and stores nothing.
+
+## Requirements
+
+You need Tampermonkey and permission to run userscripts on `activities.es.tumo.world`. You do not need to enable access to file URLs.
 
 ## Installation
 
 ### Google Chrome
 
-1. Installiere [Tampermonkey aus dem Chrome Web Store](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo).
-2. Öffne [das Userscript](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js).
-3. Tampermonkey zeigt eine Installationsseite. Klicke dort auf **Installieren**.
-4. Lade den Activity Manager neu.
+1. Install [Tampermonkey from the Chrome Web Store](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo).
+2. Right-click the Tampermonkey icon and select **Manage extension**.
+3. Enable **Allow User Scripts**. Chrome 138 and newer provide this switch. If your browser does not show it, enable **Developer mode** on `chrome://extensions`. Tampermonkey 5.3 and newer requires one of these settings in Chromium-based browsers. See the [Tampermonkey explanation](https://www.tampermonkey.net/faq.php?q=Q209).
+4. Open [the userscript](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js).
+5. Tampermonkey opens an installation page. Select **Install**.
+6. Reload the Activity Manager.
 
 ### Microsoft Edge
 
-1. Installiere [Tampermonkey aus Microsoft Edge-Add-Ons](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd).
-2. Öffne [das Userscript](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js).
-3. Bestätige die Installation in Tampermonkey.
-4. Lade den Activity Manager neu.
+1. Install [Tampermonkey from Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd).
+2. Open `edge://extensions`, select **Details** for Tampermonkey, and enable **Allow User Scripts** if Edge offers the switch. Otherwise, enable **Developer mode** on the Extensions page. Tampermonkey documents this requirement for Chromium-based browsers in its [FAQ](https://www.tampermonkey.net/faq.php?q=Q209).
+3. Open [the userscript](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js).
+4. Confirm the installation in Tampermonkey.
+5. Reload the Activity Manager.
 
 ### Mozilla Firefox
 
-1. Installiere [Tampermonkey von Mozilla Add-ons](https://addons.mozilla.org/firefox/addon/tampermonkey/).
-2. Öffne [das Userscript](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js).
-3. Bestätige die Installation in Tampermonkey.
-4. Lade den Activity Manager neu.
+1. Install [Tampermonkey from Mozilla Add-ons](https://addons.mozilla.org/firefox/addon/tampermonkey/).
+2. Open [the userscript](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js).
+3. Confirm the installation in Tampermonkey.
+4. Allow access to `activities.es.tumo.world` if Firefox asks.
+5. Reload the Activity Manager.
 
-## Benutzung
+Firefox does not use Chrome's **Allow User Scripts** or **Developer mode** settings.
 
-Öffne wie gewohnt eine Activity zur Prüfung. Ein langer Kommentar unter einer hochgeladenen Datei erscheint automatisch über mehrere Zeilen. Es gibt keine Einstellungen und keinen zusätzlichen Button.
+## Required permissions
 
-## Falls nichts passiert
+The script runs only on examiner pages below `https://activities.es.tumo.world/dashboard/activities/examiner/`. Tampermonkey must have access to this website.
 
-1. Öffne Tampermonkey über das Browser-Symbol.
-2. Prüfe, ob **TUMO Full Submission Comments** aktiviert ist.
-3. Erlaube Tampermonkey den Zugriff auf `activities.es.tumo.world`.
-4. Lade die Seite neu.
+Do not enable **Allow access to file URLs** for this script. That permission applies to local `file://` pages and is unrelated to the HTTPS Activity Manager. The [Tampermonkey FAQ](https://www.tampermonkey.net/faq.php?q=Q204) describes it separately.
 
-## Deaktivieren oder entfernen
+The userscript declares `@grant none`. It uses no external API, tracking service, or remote server.
 
-Öffne das Tampermonkey-Dashboard. Dort kannst du das Skript über den Schalter deaktivieren oder über das Papierkorb-Symbol entfernen.
+## Verify the installation
 
-## Datenschutz und Grenzen
+1. Open an Activity with a comment below an uploaded file.
+2. Open Tampermonkey from the browser toolbar and check that **TUMO Full Submission Comments** is enabled.
+3. A long comment should appear across multiple lines without an extra button or settings panel.
 
-Das Skript arbeitet nur im geöffneten Browser-Tab. Es liest den bereits sichtbaren Kommentar aus dem Activity Manager und stellt ihn anders dar. Es nutzt keine externe API, kein Tracking und keinen eigenen Server.
+## If nothing happens
 
-Chrome wurde mit Version 1.0.3 praktisch geprüft. Edge und Firefox verwenden dieselben Webstandards, wurden für diese Version aber noch nicht praktisch getestet. Wenn TUMO die Struktur des Activity Managers ändert, muss der CSS-Selektor eventuell angepasst werden.
+1. Check that **TUMO Full Submission Comments** is enabled in the Tampermonkey dashboard.
+2. Check the browser's extension settings and allow Tampermonkey to access `activities.es.tumo.world`.
+3. In Chrome or Edge, confirm that **Allow User Scripts** or **Developer mode** is enabled.
+4. Reload the Activity Manager tab.
+5. Reinstall the script from the link above if Tampermonkey shows an older version.
 
-Dieses unabhängige Projekt ist nicht mit TUMO verbunden oder von TUMO herausgegeben. TUMO ist eine Marke der jeweiligen Rechteinhaber.
+## Disable or remove the script
 
-## Entwicklungstest
+Open the Tampermonkey dashboard. Use the switch to disable the script or the trash icon to remove it.
+
+## Privacy and limitations
+
+The script works only inside the open browser tab. It reads the comment already displayed by the Activity Manager and changes its presentation.
+
+Version 1.0.3 was tested in Chrome. Edge and Firefox use the required web standards but have not yet been tested with this version. If TUMO changes the Activity Manager's page structure, the CSS selector may need an update.
+
+This independent project is not affiliated with or published by TUMO. TUMO is a trademark of its respective owners.
+
+## Development test
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Öffne danach `http://localhost:8000/test/fixture.html`. Die Seite muss **Test bestanden** anzeigen.
+Open `http://localhost:8000/test/fixture.html`. The page must display **Test passed** (`Test bestanden` in the fixture).
 
-## Lizenz
+## License
 
-Veröffentlicht unter der [Mozilla Public License 2.0](LICENSE). Wenn du diese Skriptdatei verändert weitergibst, müssen deine Änderungen ebenfalls unter der MPL 2.0 verfügbar sein.
+Released under the [Mozilla Public License 2.0](LICENSE). If you distribute a modified version of this script file, you must also make your modifications available under MPL 2.0.
+
+The translated READMEs were prepared with machine assistance and should be maintained together with this English source.
