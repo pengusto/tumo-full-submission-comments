@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<title>TUMO Full Submission Comments – Test</title>
+<div class="t-single-file-item-description">
+  <div class="t-single-file-item-description-input">
+    <input readonly value="Ein langer Kommentar, der vollständig und mehrzeilig dargestellt werden soll.">
+  </div>
+</div>
+<p id="result">Test läuft …</p>
+<script src="../tumo-full-submission-comments.user.js"></script>
+<script>
+  const input = document.querySelector('input');
+  const result = document.querySelector('#result');
+
+  setTimeout(() => {
+    input.value = 'Aktualisierter Kommentar nach einem Seitenwechsel.';
+    input.parentElement.append(document.createComment('DOM-Änderung'));
+
+    setTimeout(() => {
+      const outputs = document.querySelectorAll('.tumo-full-submission-comment');
+      const passed = outputs.length === 1
+        && outputs[0].textContent === input.value
+        && getComputedStyle(input.parentElement).display === 'none';
+
+      result.textContent = passed ? 'Test bestanden' : 'Test fehlgeschlagen';
+      result.style.color = passed ? 'green' : 'red';
+    }, 50);
+  }, 50);
+</script>
+</html>
