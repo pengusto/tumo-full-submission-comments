@@ -7,21 +7,41 @@
     <input readonly value="Ein langer Kommentar, der vollständig und mehrzeilig dargestellt werden soll.">
   </div>
 </div>
+<div class="t-single-file-item-description">
+  <div class="t-single-file-item-description-input">
+    <input readonly value="Zweiter Kommentar.">
+  </div>
+</div>
+<div class="t-single-file-item-description">
+  <div class="t-single-file-item-description-input">
+    <input readonly value="">
+  </div>
+</div>
+<input id="unrelated" readonly value="Anderes Read-only-Feld">
 <p id="result">Test läuft …</p>
 <script src="../tumo-full-submission-comments.user.js"></script>
 <script>
-  const input = document.querySelector('input');
+  const input = document.querySelector('.t-single-file-item-description input');
   const result = document.querySelector('#result');
 
   setTimeout(() => {
     input.value = 'Aktualisierter Kommentar nach einem Seitenwechsel.';
     input.parentElement.append(document.createComment('DOM-Änderung'));
+    document.body.insertAdjacentHTML('beforeend', `
+      <div class="t-single-file-item-description">
+        <div class="t-single-file-item-description-input">
+          <input readonly value="Dynamisch geladener Kommentar.">
+        </div>
+      </div>`);
 
     setTimeout(() => {
       const outputs = document.querySelectorAll('.tumo-full-submission-comment');
-      const passed = outputs.length === 1
+      const passed = outputs.length === 3
         && outputs[0].textContent === input.value
-        && getComputedStyle(input.parentElement).display === 'none';
+        && outputs[1].textContent === 'Zweiter Kommentar.'
+        && outputs[2].textContent === 'Dynamisch geladener Kommentar.'
+        && getComputedStyle(input.parentElement).display === 'none'
+        && getComputedStyle(document.querySelector('#unrelated')).display !== 'none';
 
       result.textContent = passed ? 'Test bestanden' : 'Test fehlgeschlagen';
       result.style.color = passed ? 'green' : 'red';

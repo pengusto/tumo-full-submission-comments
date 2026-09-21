@@ -53,7 +53,7 @@ Ein kleines Userscript für den TUMO Activity Manager. Es zeigt abgeschnittene K
 
 Das Skript arbeitet nur im geöffneten Browser-Tab. Es liest den bereits sichtbaren Kommentar aus dem Activity Manager und stellt ihn anders dar. Es nutzt keine externe API, kein Tracking und keinen eigenen Server.
 
-Chrome wurde mit Version 1.0.2 praktisch geprüft. Edge und Firefox verwenden dieselben Webstandards, wurden für diese Version aber noch nicht praktisch getestet. Wenn TUMO die Struktur des Activity Managers ändert, muss der CSS-Selektor eventuell angepasst werden.
+Chrome wurde mit Version 1.0.3 praktisch geprüft. Edge und Firefox verwenden dieselben Webstandards, wurden für diese Version aber noch nicht praktisch getestet. Wenn TUMO die Struktur des Activity Managers ändert, muss der CSS-Selektor eventuell angepasst werden.
 
 Dieses unabhängige Projekt ist nicht mit TUMO verbunden oder von TUMO herausgegeben. TUMO ist eine Marke der jeweiligen Rechteinhaber.
 
