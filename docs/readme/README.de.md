@@ -28,13 +28,17 @@ Du brauchst Tampermonkey und die Berechtigung, Userscripts auf `activities.es.tu
 5. Tampermonkey öffnet eine Installationsseite. Klicke dort auf **Installieren**.
 6. Lade den Activity Manager neu.
 
-### Microsoft Edge
+### Andere Chromium-basierte Desktop-Browser
 
-1. Installiere [Tampermonkey aus Microsoft Edge-Add-Ons](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd).
-2. Öffne `edge://extensions`, wähle bei Tampermonkey **Details** und aktiviere **Userscripts zulassen**, falls Edge den Schalter anbietet. Aktiviere andernfalls den **Entwicklermodus** auf der Erweiterungsseite. Tampermonkey erklärt diese Voraussetzung für Chromium-Browser in seiner [FAQ](https://www.tampermonkey.net/faq.php?q=Q209).
+Dieser Abschnitt gilt für Microsoft Edge, Vivaldi und den Ecosia Desktop Browser.
+
+1. Installiere Tampermonkey aus dem Erweiterungs-Store deines Browsers. Für Edge gibt es [Microsoft Edge-Add-Ons](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd). Vivaldi unterstützt Erweiterungen aus dem [Chrome Web Store](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo).
+2. Öffne die Erweiterungsdetails von Tampermonkey und aktiviere **Userscripts zulassen**, falls dein Browser den Schalter anbietet. Aktiviere andernfalls den **Entwicklermodus** auf der Erweiterungsseite. Tampermonkey erklärt diese Voraussetzung für Chromium-Browser in seiner [FAQ](https://www.tampermonkey.net/faq.php?q=Q209).
 3. Öffne [das Userscript](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js).
 4. Bestätige die Installation in Tampermonkey.
 5. Lade den Activity Manager neu.
+
+Vivaldi unterstützt Chrome-Erweiterungen offiziell. Der Ecosia Desktop Browser basiert auf Chromium, die Installation von Tampermonkey wurde dort aber noch nicht geprüft. Das Userscript kann dort nur laufen, wenn sich Tampermonkey installieren lässt.
 
 ### Mozilla Firefox
 
@@ -45,6 +49,16 @@ Du brauchst Tampermonkey und die Berechtigung, Userscripts auf `activities.es.tu
 5. Lade den Activity Manager neu.
 
 Firefox verwendet die Chrome-Einstellungen **Userscripts zulassen** und **Entwicklermodus** nicht.
+
+### Safari unter macOS
+
+1. Installiere [Tampermonkey aus dem App Store](https://apps.apple.com/app/tampermonkey/id6738342400). Die aktuelle Version benötigt macOS 11 oder neuer. Auf seiner [offiziellen Safari-Seite](https://www.tampermonkey.net/index.php?browser=safari&locale=de) führt Tampermonkey außerdem eine Classic-Version für ältere Safari-Versionen auf.
+2. Öffne **Safari → Einstellungen → Erweiterungen** und aktiviere Tampermonkey.
+3. Erlaube Tampermonkey den Zugriff auf `activities.es.tumo.world`.
+4. Öffne [das Userscript](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js) und bestätige die Installation.
+5. Lade den Activity Manager neu.
+
+Safari wurde noch nicht praktisch im Activity Manager getestet. Mobile Browser sind nicht Bestandteil dieser Anleitung.
 
 ## Benötigte Berechtigungen
 
@@ -64,7 +78,7 @@ Das Userscript verwendet `@grant none`. Es nutzt keine externe API, kein Trackin
 
 1. Prüfe im Tampermonkey-Dashboard, ob **TUMO Full Submission Comments** aktiviert ist.
 2. Erlaube Tampermonkey in den Erweiterungseinstellungen des Browsers den Zugriff auf `activities.es.tumo.world`.
-3. Prüfe in Chrome oder Edge, ob **Userscripts zulassen** oder der **Entwicklermodus** aktiviert ist.
+3. Prüfe in einem Chromium-Browser, ob **Userscripts zulassen** oder der **Entwicklermodus** aktiviert ist. Prüfe unter Safari, ob die Tampermonkey-Erweiterung aktiv ist.
 4. Lade den Activity-Manager-Tab neu.
 5. Installiere das Skript über den Link oben erneut, falls Tampermonkey eine ältere Version anzeigt.
 
@@ -76,7 +90,7 @@ Das Userscript verwendet `@grant none`. Es nutzt keine externe API, kein Trackin
 
 Das Skript arbeitet nur im geöffneten Browser-Tab. Es liest den bereits sichtbaren Kommentar aus dem Activity Manager und ändert dessen Darstellung.
 
-Version 1.0.3 wurde in Chrome getestet. Edge und Firefox verwenden die benötigten Webstandards, wurden mit dieser Version aber noch nicht praktisch geprüft. Wenn TUMO die Struktur des Activity Managers ändert, muss der CSS-Selektor eventuell angepasst werden.
+Version 1.0.3 wurde in Chrome getestet. Edge, Vivaldi, Ecosia, Firefox und Safari wurden mit dieser Version noch nicht praktisch geprüft. Wenn TUMO die Struktur des Activity Managers ändert, muss der CSS-Selektor eventuell angepasst werden.
 
 Dieses unabhängige Projekt ist nicht mit TUMO verbunden oder von TUMO herausgegeben. TUMO ist eine Marke der jeweiligen Rechteinhaber.
 

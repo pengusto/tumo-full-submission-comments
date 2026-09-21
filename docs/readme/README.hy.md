@@ -28,13 +28,17 @@
 5. Tampermonkey-ի տեղադրման էջում ընտրեք **Install**։
 6. Վերաբեռնեք Activity Manager-ը։
 
-### Microsoft Edge
+### Chromium-ի վրա հիմնված այլ աշխատասեղանի դիտարկիչներ
 
-1. Տեղադրեք [Tampermonkey-ը Microsoft Edge Add-ons-ից](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)։
-2. Բացեք `edge://extensions`, Tampermonkey-ի համար ընտրեք **Details** և միացրեք **Allow User Scripts**, եթե Edge-ն առաջարկում է այդ անջատիչը։ Հակառակ դեպքում Extensions էջում միացրեք **Developer mode**։ Chromium դիտարկիչների այս պահանջը Tampermonkey-ը նկարագրում է իր [FAQ-ում](https://www.tampermonkey.net/faq.php?q=Q209)։
+Այս բաժինը վերաբերում է Microsoft Edge-ին, Vivaldi-ին և Ecosia Desktop Browser-ին։
+
+1. Տեղադրեք Tampermonkey-ը ձեր դիտարկիչի ընդլայնումների խանութից։ Edge-ի համար հասանելի է [Microsoft Edge Add-ons-ը](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)։ Vivaldi-ն աջակցում է [Chrome Web Store](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)-ի ընդլայնումները։
+2. Բացեք Tampermonkey-ի ընդլայնման մանրամասները և միացրեք **Allow User Scripts**, եթե դիտարկիչն առաջարկում է այդ անջատիչը։ Հակառակ դեպքում ընդլայնումների էջում միացրեք **Developer mode**։ Chromium դիտարկիչների այս պահանջը Tampermonkey-ը նկարագրում է իր [FAQ-ում](https://www.tampermonkey.net/faq.php?q=Q209)։
 3. Բացեք [userscript-ը](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js)։
 4. Հաստատեք տեղադրումը Tampermonkey-ում։
 5. Վերաբեռնեք Activity Manager-ը։
+
+Vivaldi-ն պաշտոնապես աջակցում է Chrome-ի ընդլայնումները։ Ecosia Desktop Browser-ը հիմնված է Chromium-ի վրա, սակայն Tampermonkey-ի տեղադրումն այնտեղ դեռ չի ստուգվել։ Userscript-ը կարող է աշխատել միայն այն դեպքում, երբ դիտարկիչը թույլ է տալիս տեղադրել Tampermonkey-ը։
 
 ### Mozilla Firefox
 
@@ -45,6 +49,16 @@
 5. Վերաբեռնեք Activity Manager-ը։
 
 Firefox-ը չի օգտագործում Chrome-ի **Allow User Scripts** կամ **Developer mode** կարգավորումները։
+
+### Safari-ն macOS-ում
+
+1. Տեղադրեք [Tampermonkey-ը App Store-ից](https://apps.apple.com/app/tampermonkey/id6738342400)։ Ընթացիկ տարբերակը պահանջում է macOS 11 կամ ավելի նոր տարբերակ։ Tampermonkey-ի [Safari-ի պաշտոնական էջում](https://www.tampermonkey.net/index.php?browser=safari&locale=en) նշված է նաև Classic տարբերակը՝ Safari-ի ավելի հին տարբերակների համար։
+2. Բացեք **Safari → Settings → Extensions** և միացրեք Tampermonkey-ը։
+3. Tampermonkey-ին թույլատրեք հասանելիություն `activities.es.tumo.world` կայքին։
+4. Բացեք [userscript-ը](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js) և հաստատեք տեղադրումը։
+5. Վերաբեռնեք Activity Manager-ը։
+
+Safari-ն դեռ չի փորձարկվել Activity Manager-ում։ Այս ուղեցույցը չի ներառում բջջային դիտարկիչները։
 
 ## Անհրաժեշտ թույլտվություններ
 
@@ -64,7 +78,7 @@ Userscript-ը հայտարարում է `@grant none`։ Այն չի օգտագո
 
 1. Tampermonkey-ի կառավարման էջում ստուգեք, որ **TUMO Full Submission Comments**-ը միացված է։
 2. Դիտարկիչի extension կարգավորումներում Tampermonkey-ին թույլատրեք հասանելիություն `activities.es.tumo.world` կայքին։
-3. Chrome-ում կամ Edge-ում ստուգեք, որ **Allow User Scripts** կամ **Developer mode** կարգավորումը միացված է։
+3. Chromium-ի վրա հիմնված դիտարկիչում ստուգեք, որ **Allow User Scripts** կամ **Developer mode** կարգավորումը միացված է։ Safari-ում ստուգեք, որ Tampermonkey ընդլայնումը միացված է։
 4. Վերաբեռնեք Activity Manager-ի ներդիրը։
 5. Եթե Tampermonkey-ը ցույց է տալիս հին տարբերակ, վերատեղադրեք սկրիպտը վերևի հղումով։
 
@@ -76,7 +90,7 @@ Userscript-ը հայտարարում է `@grant none`։ Այն չի օգտագո
 
 Սկրիպտն աշխատում է միայն բաց դիտարկիչի ներդիրում։ Այն կարդում է Activity Manager-ում արդեն ցուցադրված մեկնաբանությունը և փոխում միայն դրա տեսքը։
 
-1.0.3 տարբերակը փորձարկվել է Chrome-ում։ Edge-ը և Firefox-ը աջակցում են անհրաժեշտ վեբ ստանդարտները, սակայն այս տարբերակը դեռ գործնականում չի փորձարկվել այդ դիտարկիչներում։ Եթե TUMO-ն փոխի Activity Manager-ի էջի կառուցվածքը, հնարավոր է անհրաժեշտ լինի թարմացնել CSS selector-ը։
+1.0.3 տարբերակը փորձարկվել է Chrome-ում։ Edge-ը, Vivaldi-ն, Ecosia-ն, Firefox-ը և Safari-ն այս տարբերակով դեռ գործնականում չեն փորձարկվել։ Եթե TUMO-ն փոխի Activity Manager-ի էջի կառուցվածքը, հնարավոր է անհրաժեշտ լինի թարմացնել CSS selector-ը։
 
 Այս անկախ նախագիծը կապված չէ TUMO-ի հետ և չի հրապարակվել TUMO-ի կողմից։ TUMO-ն համապատասխան իրավատերերի ապրանքանիշն է։
 

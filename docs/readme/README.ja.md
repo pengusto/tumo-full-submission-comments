@@ -28,13 +28,17 @@ Tampermonkey と、`activities.es.tumo.world` でユーザースクリプトを�
 5. Tampermonkey のインストールページで**インストール**を選択します。
 6. Activity Manager を再読み込みします。
 
-### Microsoft Edge
+### その他の Chromium ベースのデスクトップブラウザ
 
-1. [Microsoft Edge アドオンから Tampermonkey](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd) をインストールします。
-2. `edge://extensions` を開き、Tampermonkey の**詳細**を選択します。Edge に**ユーザースクリプトを許可する**が表示される場合は有効にしてください。表示されない場合は、拡張機能ページで**開発者モード**を有効にします。Tampermonkey は Chromium ベースのブラウザでの要件を [FAQ](https://www.tampermonkey.net/faq.php?q=Q209) で説明しています。
+この手順は Microsoft Edge、Vivaldi、Ecosia Desktop Browser に対応します。
+
+1. ブラウザの拡張機能ストアから Tampermonkey をインストールします。Edge では [Microsoft Edge アドオン](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)を利用できます。Vivaldi は [Chrome ウェブストア](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)の拡張機能に対応しています。
+2. Tampermonkey の拡張機能詳細を開き、ブラウザに**ユーザースクリプトを許可する**が表示される場合は有効にします。表示されない場合は、拡張機能ページで**開発者モード**を有効にしてください。Tampermonkey は Chromium ベースのブラウザでの要件を [FAQ](https://www.tampermonkey.net/faq.php?q=Q209) で説明しています。
 3. [ユーザースクリプト](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js)を開きます。
 4. Tampermonkey でインストールを確認します。
 5. Activity Manager を再読み込みします。
+
+Vivaldi は Chrome 拡張機能を公式にサポートしています。Ecosia Desktop Browser は Chromium ベースですが、Tampermonkey のインストールはまだ確認していません。ブラウザに Tampermonkey をインストールできる場合に限り、このユーザースクリプトを利用できます。
 
 ### Mozilla Firefox
 
@@ -45,6 +49,16 @@ Tampermonkey と、`activities.es.tumo.world` でユーザースクリプトを�
 5. Activity Manager を再読み込みします。
 
 Firefox では Chrome の**ユーザースクリプトを許可する**や**デベロッパー モード**の設定は使用しません。
+
+### macOS の Safari
+
+1. [App Store から Tampermonkey](https://apps.apple.com/app/tampermonkey/id6738342400) をインストールします。現行版には macOS 11 以降が必要です。Tampermonkey の[公式 Safari ページ](https://www.tampermonkey.net/index.php?browser=safari&locale=ja)には、古い Safari 向けの Classic 版も掲載されています。
+2. **Safari → 設定 → 機能拡張**を開き、Tampermonkey を有効にします。
+3. Tampermonkey に `activities.es.tumo.world` へのアクセスを許可します。
+4. [ユーザースクリプト](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js)を開き、インストールを確認します。
+5. Activity Manager を再読み込みします。
+
+Safari ではまだ Activity Manager 上の動作を確認していません。このガイドはモバイルブラウザを対象としていません。
 
 ## 必要な権限
 
@@ -64,7 +78,7 @@ Firefox では Chrome の**ユーザースクリプトを許可する**や**デ�
 
 1. Tampermonkey のダッシュボードで **TUMO Full Submission Comments** が有効か確認します。
 2. ブラウザの拡張機能設定で、Tampermonkey に `activities.es.tumo.world` へのアクセスを許可します。
-3. Chrome または Edge では、**ユーザースクリプトを許可する**または**デベロッパー モード**が有効か確認します。
+3. Chromium ベースのブラウザでは、**ユーザースクリプトを許可する**または**デベロッパー モード**が有効か確認します。Safari では Tampermonkey 機能拡張が有効か確認してください。
 4. Activity Manager のタブを再読み込みします。
 5. Tampermonkey に古いバージョンが表示される場合は、上のリンクから再インストールします。
 
@@ -76,7 +90,7 @@ Tampermonkey のダッシュボードを開きます。スイッチで無効化�
 
 このスクリプトは開いているブラウザタブ内だけで動作します。Activity Manager が表示済みのコメントを読み取り、その表示方法だけを変更します。
 
-バージョン 1.0.3 は Chrome でテスト済みです。Edge と Firefox は必要なウェブ標準に対応していますが、このバージョンでの実機テストはまだ行っていません。TUMO が Activity Manager のページ構造を変更した場合は、CSS セレクターの更新が必要になることがあります。
+バージョン 1.0.3 は Chrome でテスト済みです。Edge、Vivaldi、Ecosia、Firefox、Safari では、このバージョンの実機テストをまだ行っていません。TUMO が Activity Manager のページ構造を変更した場合は、CSS セレクターの更新が必要になることがあります。
 
 このプロジェクトは TUMO とは独立しており、TUMO による公開物ではありません。TUMO は各権利所有者の商標です。
 
