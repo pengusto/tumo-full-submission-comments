@@ -30,7 +30,7 @@ Du brauchst Tampermonkey und die Berechtigung, Userscripts auf `activities.es.tu
 
 ### Andere Chromium-basierte Desktop-Browser
 
-Dieser Abschnitt gilt für Microsoft Edge, Vivaldi und den Ecosia Desktop Browser.
+Diese Schritte gelten allgemein für Chromium-basierte Desktop-Browser, darunter Microsoft Edge, Vivaldi, Brave, Opera und der Ecosia Desktop Browser. Weitere Chromium-basierte Browser können genauso funktionieren, sofern sie Tampermonkey und die Ausführung von Userscripts unterstützen.
 
 1. Installiere Tampermonkey aus dem Erweiterungs-Store deines Browsers. Für Edge gibt es [Microsoft Edge-Add-Ons](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd). Vivaldi unterstützt Erweiterungen aus dem [Chrome Web Store](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo).
 2. Öffne die Erweiterungsdetails von Tampermonkey und aktiviere **Userscripts zulassen**, falls dein Browser den Schalter anbietet. Aktiviere andernfalls den **Entwicklermodus** auf der Erweiterungsseite. Tampermonkey erklärt diese Voraussetzung für Chromium-Browser in seiner [FAQ](https://www.tampermonkey.net/faq.php?q=Q209).
@@ -38,7 +38,7 @@ Dieser Abschnitt gilt für Microsoft Edge, Vivaldi und den Ecosia Desktop Browse
 4. Bestätige die Installation in Tampermonkey.
 5. Lade den Activity Manager neu.
 
-Vivaldi unterstützt Chrome-Erweiterungen offiziell. Der Ecosia Desktop Browser basiert auf Chromium, die Installation von Tampermonkey wurde dort aber noch nicht geprüft. Das Userscript kann dort nur laufen, wenn sich Tampermonkey installieren lässt.
+Vivaldi, Brave und Opera unterstützen Chrome-Erweiterungen. Der Ecosia Desktop Browser basiert auf Chromium, die Installation von Tampermonkey wurde dort aber noch nicht geprüft. Das Userscript kann in diesen Browsern nur laufen, wenn sich Tampermonkey installieren und die Ausführung von Userscripts freigeben lässt.
 
 ### Mozilla Firefox
 
@@ -90,7 +90,7 @@ Das Userscript verwendet `@grant none`. Es nutzt keine externe API, kein Trackin
 
 Das Skript arbeitet nur im geöffneten Browser-Tab. Es liest den bereits sichtbaren Kommentar aus dem Activity Manager und ändert dessen Darstellung.
 
-Version 1.0.3 wurde in Chrome getestet. Edge, Vivaldi, Ecosia, Firefox und Safari wurden mit dieser Version noch nicht praktisch geprüft. Wenn TUMO die Struktur des Activity Managers ändert, muss der CSS-Selektor eventuell angepasst werden.
+Version 1.0.3 wurde in Chrome getestet. Andere Chromium-basierte Browser, Firefox und Safari wurden mit dieser Version noch nicht praktisch geprüft. Wenn TUMO die Struktur des Activity Managers ändert, muss der CSS-Selektor eventuell angepasst werden.
 
 Dieses unabhängige Projekt ist nicht mit TUMO verbunden oder von TUMO herausgegeben. TUMO ist eine Marke der jeweiligen Rechteinhaber.
 

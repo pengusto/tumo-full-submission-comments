@@ -30,7 +30,7 @@ Tampermonkey と、`activities.es.tumo.world` でユーザースクリプトを�
 
 ### その他の Chromium ベースのデスクトップブラウザ
 
-この手順は Microsoft Edge、Vivaldi、Ecosia Desktop Browser に対応します。
+この手順は、Microsoft Edge、Vivaldi、Brave、Opera、Ecosia Desktop Browser など、Chromium ベースのデスクトップブラウザに共通して適用できます。Tampermonkey のインストールとユーザースクリプトの実行に対応していれば、その他の Chromium ベースのブラウザでも同じ方法で動作する可能性があります。
 
 1. ブラウザの拡張機能ストアから Tampermonkey をインストールします。Edge では [Microsoft Edge アドオン](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)を利用できます。Vivaldi は [Chrome ウェブストア](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)の拡張機能に対応しています。
 2. Tampermonkey の拡張機能詳細を開き、ブラウザに**ユーザースクリプトを許可する**が表示される場合は有効にします。表示されない場合は、拡張機能ページで**開発者モード**を有効にしてください。Tampermonkey は Chromium ベースのブラウザでの要件を [FAQ](https://www.tampermonkey.net/faq.php?q=Q209) で説明しています。
@@ -38,7 +38,7 @@ Tampermonkey と、`activities.es.tumo.world` でユーザースクリプトを�
 4. Tampermonkey でインストールを確認します。
 5. Activity Manager を再読み込みします。
 
-Vivaldi は Chrome 拡張機能を公式にサポートしています。Ecosia Desktop Browser は Chromium ベースですが、Tampermonkey のインストールはまだ確認していません。ブラウザに Tampermonkey をインストールできる場合に限り、このユーザースクリプトを利用できます。
+Vivaldi、Brave、Opera は Chrome 拡張機能に対応しています。Ecosia Desktop Browser は Chromium ベースですが、Tampermonkey のインストールはまだ確認していません。Tampermonkey をインストールし、ユーザースクリプトの実行を許可できるブラウザでのみ、このユーザースクリプトを利用できます。
 
 ### Mozilla Firefox
 
@@ -90,7 +90,7 @@ Tampermonkey のダッシュボードを開きます。スイッチで無効化�
 
 このスクリプトは開いているブラウザタブ内だけで動作します。Activity Manager が表示済みのコメントを読み取り、その表示方法だけを変更します。
 
-バージョン 1.0.3 は Chrome でテスト済みです。Edge、Vivaldi、Ecosia、Firefox、Safari では、このバージョンの実機テストをまだ行っていません。TUMO が Activity Manager のページ構造を変更した場合は、CSS セレクターの更新が必要になることがあります。
+バージョン 1.0.3 は Chrome でテスト済みです。その他の Chromium ベースのブラウザ、Firefox、Safari では、このバージョンの実機テストをまだ行っていません。TUMO が Activity Manager のページ構造を変更した場合は、CSS セレクターの更新が必要になることがあります。
 
 このプロジェクトは TUMO とは独立しており、TUMO による公開物ではありません。TUMO は各権利所有者の商標です。
 

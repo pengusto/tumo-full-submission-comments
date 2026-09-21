@@ -30,7 +30,7 @@ You need Tampermonkey and permission to run userscripts on `activities.es.tumo.w
 
 ### Other Chromium-based desktop browsers
 
-This covers Microsoft Edge, Vivaldi, and the Ecosia Desktop Browser.
+These steps generally apply to Chromium-based desktop browsers, including Microsoft Edge, Vivaldi, Brave, Opera, and the Ecosia Desktop Browser. Other Chromium-based browsers may work in the same way if they support Tampermonkey and userscript execution.
 
 1. Install Tampermonkey from your browser's extension store. Edge users can use [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd). Vivaldi supports extensions from the [Chrome Web Store](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo).
 2. Open Tampermonkey's extension details and enable **Allow User Scripts** if the browser offers the switch. Otherwise, enable **Developer mode** on the browser's Extensions page. Tampermonkey documents this requirement for Chromium-based browsers in its [FAQ](https://www.tampermonkey.net/faq.php?q=Q209).
@@ -38,7 +38,7 @@ This covers Microsoft Edge, Vivaldi, and the Ecosia Desktop Browser.
 4. Confirm the installation in Tampermonkey.
 5. Reload the Activity Manager.
 
-Vivaldi officially supports Chrome extensions. The Ecosia Desktop Browser is Chromium-based, but installing Tampermonkey in Ecosia has not yet been verified. The userscript can run there only if the browser allows Tampermonkey to be installed.
+Vivaldi, Brave, and Opera support Chrome extensions. The Ecosia Desktop Browser is Chromium-based, but installing Tampermonkey in Ecosia has not yet been verified. The userscript can run in any of these browsers only if the browser allows Tampermonkey to be installed and userscripts to run.
 
 ### Mozilla Firefox
 
@@ -90,7 +90,7 @@ Open the Tampermonkey dashboard. Use the switch to disable the script or the tra
 
 The script works only inside the open browser tab. It reads the comment already displayed by the Activity Manager and changes its presentation.
 
-Version 1.0.3 was tested in Chrome. Edge, Vivaldi, Ecosia, Firefox, and Safari have not yet been tested with this version. If TUMO changes the Activity Manager's page structure, the CSS selector may need an update.
+Version 1.0.3 was tested in Chrome. Other Chromium-based browsers, Firefox, and Safari have not yet been tested with this version. If TUMO changes the Activity Manager's page structure, the CSS selector may need an update.
 
 This independent project is not affiliated with or published by TUMO. TUMO is a trademark of its respective owners.
 

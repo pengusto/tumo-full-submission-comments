@@ -30,7 +30,7 @@
 
 ### Chromium-ի վրա հիմնված այլ աշխատասեղանի դիտարկիչներ
 
-Այս բաժինը վերաբերում է Microsoft Edge-ին, Vivaldi-ին և Ecosia Desktop Browser-ին։
+Այս քայլերն ընդհանուր առմամբ վերաբերում են Chromium-ի վրա հիմնված աշխատասեղանի դիտարկիչներին, այդ թվում՝ Microsoft Edge-ին, Vivaldi-ին, Brave-ին, Opera-ին և Ecosia Desktop Browser-ին։ Chromium-ի վրա հիմնված այլ դիտարկիչներ նույնպես կարող են նույն կերպ աշխատել, եթե աջակցում են Tampermonkey-ին և userscript-ների գործարկմանը։
 
 1. Տեղադրեք Tampermonkey-ը ձեր դիտարկիչի ընդլայնումների խանութից։ Edge-ի համար հասանելի է [Microsoft Edge Add-ons-ը](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)։ Vivaldi-ն աջակցում է [Chrome Web Store](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)-ի ընդլայնումները։
 2. Բացեք Tampermonkey-ի ընդլայնման մանրամասները և միացրեք **Allow User Scripts**, եթե դիտարկիչն առաջարկում է այդ անջատիչը։ Հակառակ դեպքում ընդլայնումների էջում միացրեք **Developer mode**։ Chromium դիտարկիչների այս պահանջը Tampermonkey-ը նկարագրում է իր [FAQ-ում](https://www.tampermonkey.net/faq.php?q=Q209)։
@@ -38,7 +38,7 @@
 4. Հաստատեք տեղադրումը Tampermonkey-ում։
 5. Վերաբեռնեք Activity Manager-ը։
 
-Vivaldi-ն պաշտոնապես աջակցում է Chrome-ի ընդլայնումները։ Ecosia Desktop Browser-ը հիմնված է Chromium-ի վրա, սակայն Tampermonkey-ի տեղադրումն այնտեղ դեռ չի ստուգվել։ Userscript-ը կարող է աշխատել միայն այն դեպքում, երբ դիտարկիչը թույլ է տալիս տեղադրել Tampermonkey-ը։
+Vivaldi-ն, Brave-ը և Opera-ն աջակցում են Chrome-ի ընդլայնումները։ Ecosia Desktop Browser-ը հիմնված է Chromium-ի վրա, սակայն Tampermonkey-ի տեղադրումն այնտեղ դեռ չի ստուգվել։ Userscript-ը կարող է աշխատել միայն այն դիտարկիչներում, որոնք թույլ են տալիս տեղադրել Tampermonkey-ը և գործարկել userscript-ներ։
 
 ### Mozilla Firefox
 
@@ -90,7 +90,7 @@ Userscript-ը հայտարարում է `@grant none`։ Այն չի օգտագո
 
 Սկրիպտն աշխատում է միայն բաց դիտարկիչի ներդիրում։ Այն կարդում է Activity Manager-ում արդեն ցուցադրված մեկնաբանությունը և փոխում միայն դրա տեսքը։
 
-1.0.3 տարբերակը փորձարկվել է Chrome-ում։ Edge-ը, Vivaldi-ն, Ecosia-ն, Firefox-ը և Safari-ն այս տարբերակով դեռ գործնականում չեն փորձարկվել։ Եթե TUMO-ն փոխի Activity Manager-ի էջի կառուցվածքը, հնարավոր է անհրաժեշտ լինի թարմացնել CSS selector-ը։
+1.0.3 տարբերակը փորձարկվել է Chrome-ում։ Chromium-ի վրա հիմնված մյուս դիտարկիչները, Firefox-ը և Safari-ն այս տարբերակով դեռ գործնականում չեն փորձարկվել։ Եթե TUMO-ն փոխի Activity Manager-ի էջի կառուցվածքը, հնարավոր է անհրաժեշտ լինի թարմացնել CSS selector-ը։
 
 Այս անկախ նախագիծը կապված չէ TUMO-ի հետ և չի հրապարակվել TUMO-ի կողմից։ TUMO-ն համապատասխան իրավատերերի ապրանքանիշն է։
 
