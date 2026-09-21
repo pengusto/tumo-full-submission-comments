@@ -90,7 +90,7 @@ Open the Tampermonkey dashboard. Use the switch to disable the script or the tra
 
 The script works only inside the open browser tab. It reads the comment already displayed by the Activity Manager and changes its presentation.
 
-Version 1.0.3 was tested in Chrome. Other Chromium-based browsers, Firefox, and Safari have not yet been tested with this version. If TUMO changes the Activity Manager's page structure, the CSS selector may need an update.
+Version 1.0.4 was tested in Chrome. Other Chromium-based browsers, Firefox, and Safari have not yet been tested with this version. If TUMO changes the Activity Manager's page structure, the CSS selector may need an update.
 
 This independent project is not affiliated with or published by TUMO. TUMO is a trademark of its respective owners.
 

@@ -90,7 +90,7 @@ Das Userscript verwendet `@grant none`. Es nutzt keine externe API, kein Trackin
 
 Das Skript arbeitet nur im geöffneten Browser-Tab. Es liest den bereits sichtbaren Kommentar aus dem Activity Manager und ändert dessen Darstellung.
 
-Version 1.0.3 wurde in Chrome getestet. Andere Chromium-basierte Browser, Firefox und Safari wurden mit dieser Version noch nicht praktisch geprüft. Wenn TUMO die Struktur des Activity Managers ändert, muss der CSS-Selektor eventuell angepasst werden.
+Version 1.0.4 wurde in Chrome getestet. Andere Chromium-basierte Browser, Firefox und Safari wurden mit dieser Version noch nicht praktisch geprüft. Wenn TUMO die Struktur des Activity Managers ändert, muss der CSS-Selektor eventuell angepasst werden.
 
 Dieses unabhängige Projekt ist nicht mit TUMO verbunden oder von TUMO herausgegeben. TUMO ist eine Marke der jeweiligen Rechteinhaber.
 

@@ -1,9 +1,13 @@
 // ==UserScript==
 // @name         TUMO Full Submission Comments
 // @namespace    https://activities.es.tumo.world/
-// @version      1.0.3
+// @version      1.0.4
 // @author       Pengusto
-// @description  Zeigt abgeschnittene Abgabe-Kommentare vollständig und mehrzeilig an.
+// @description  Displays truncated submission comments in the TUMO Activity Manager in full.
+// @description:de  Zeigt abgeschnittene Abgabe-Kommentare im TUMO Activity Manager vollständig an.
+// @description:fr  Affiche intégralement les commentaires de soumission tronqués dans TUMO Activity Manager.
+// @description:ja  TUMO Activity Managerで省略された提出コメントを全文表示します。
+// @description:hy  TUMO Activity Manager-ում ամբողջությամբ ցուցադրում է կրճատված հանձնման մեկնաբանությունները։
 // @match        https://activities.es.tumo.world/dashboard/activities/examiner/*
 // @homepageURL  https://github.com/pengusto/tumo-full-submission-comments
 // @supportURL   https://github.com/pengusto/tumo-full-submission-comments/issues

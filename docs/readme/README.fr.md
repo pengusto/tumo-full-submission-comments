@@ -90,7 +90,7 @@ Ouvrez le tableau de bord Tampermonkey. Utilisez l'interrupteur pour désactiver
 
 Le script fonctionne uniquement dans l'onglet ouvert. Il lit le commentaire déjà affiché par Activity Manager et modifie sa présentation.
 
-La version 1.0.3 a été testée dans Chrome. Les autres navigateurs basés sur Chromium, Firefox et Safari n'ont pas encore été testés avec cette version. Si TUMO modifie la structure de la page d'Activity Manager, le sélecteur CSS devra peut-être être mis à jour.
+La version 1.0.4 a été testée dans Chrome. Les autres navigateurs basés sur Chromium, Firefox et Safari n'ont pas encore été testés avec cette version. Si TUMO modifie la structure de la page d'Activity Manager, le sélecteur CSS devra peut-être être mis à jour.
 
 Ce projet indépendant n'est ni affilié à TUMO ni publié par TUMO. TUMO est une marque de ses propriétaires respectifs.
 
