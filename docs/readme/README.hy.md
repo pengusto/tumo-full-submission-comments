@@ -1,7 +1,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../assets/comment-unfolding-paper-dark-v1.png">
   <source media="(prefers-color-scheme: light)" srcset="../assets/comment-unfolding-paper-v2.png">
-  <img src="../assets/comment-unfolding-paper-v2.png" alt="Նկարազարդում․ պինգվինը բացում է խոսքի ամպիկը՝ ամբողջ մեկնաբանությունը ցուցադրելու համար։" width="2172" height="724">
+  <img src="../assets/comment-unfolding-paper-v2.png" alt="Նկարազարդում․ պինգվինը բացում է խոսքի ամպիկը՝ ամբողջ մեկնաբանությունը ցուցադրելու համար։">
 </picture>
 
 # TUMO Full Submission Comments

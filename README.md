@@ -1,7 +1,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/comment-unfolding-paper-dark-v1.png">
   <source media="(prefers-color-scheme: light)" srcset="docs/assets/comment-unfolding-paper-v2.png">
-  <img src="docs/assets/comment-unfolding-paper-v2.png" alt="Illustration: a penguin unfolds a speech bubble to reveal a complete comment." width="2172" height="724">
+  <img src="docs/assets/comment-unfolding-paper-v2.png" alt="Illustration: a penguin unfolds a speech bubble to reveal a complete comment.">
 </picture>
 
 # TUMO Full Submission Comments
