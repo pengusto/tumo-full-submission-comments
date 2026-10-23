@@ -22,3 +22,7 @@
 - All five READMEs use native `picture` / `source` with `prefers-color-scheme`, plus a Light `img` fallback and localized alt text. Both themes retain the same 3:1 ratio.
 - Existing AI-origin and rights limitations apply. Original B and island alternative A are retained. No new license or affiliation is asserted. No automation or status graphics were added.
 - Local theme preview checked at 1200, 390 and 320 px: the browser selected the intended source in all six cases, without cropping or page overflow. At 320 px the title, penguin and unfolding action remain recognizable; no separate mobile composition was needed. This is not a live GitHub acceptance check.
+
+## Responsive embed verification
+
+Keep the banner `img` free of fixed width/height attributes so GitHub can preserve its intrinsic 3:1 ratio. On the live desktop README, `width="2172" height="724"` was rendered at 838 × 724 px: GitHub constrained width but retained the fixed height. A local preview with `height:auto` masked this defect. Verify geometry with actual GitHub CSS at desktop and 320–390 px, rather than relying only on preview styling.
