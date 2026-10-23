@@ -1,10 +1,34 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/comment-unfolding-paper-dark-v1.png">
+  <source media="(prefers-color-scheme: light)" srcset="docs/assets/comment-unfolding-paper-v2.png">
+  <img src="docs/assets/comment-unfolding-paper-v2.png" alt="Illustration: a penguin unfolds a speech bubble to reveal a complete comment." width="2172" height="724">
+</picture>
+
 # TUMO Full Submission Comments
 
 **English** | [Deutsch](docs/readme/README.de.md) | [Français](docs/readme/README.fr.md) | [日本語](docs/readme/README.ja.md) | [Հայերեն](docs/readme/README.hy.md)
 
-A small userscript for the TUMO Activity Manager. It displays truncated comments below uploaded files in full and wraps long text across multiple lines.
+**Read the whole comment. Keep the review moving.**
+
+For TUMO examiners reviewing uploaded work: this small userscript turns clipped, single-line submission comments into readable, wrapping text inside the Activity Manager.
 
 [Install the userscript](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js)
+
+## The difference at a glance
+
+| Without the script | With the script |
+| --- | --- |
+| The animation is ready. Please check… | The animation is ready. Please check the timing in the final scene. |
+
+Illustrative text only; no student data or TUMO interface assets.
+
+## Start here
+
+1. Set up Tampermonkey using the [browser instructions below](#installation).
+2. [Install the userscript](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js) and confirm in Tampermonkey.
+3. Reload an examiner page and read a long comment below an uploaded file.
+
+No build, terminal, or TUMO account credentials are needed to install the script. Using it requires your existing access to the Activity Manager.
 
 ## What the script does
 
@@ -90,17 +114,25 @@ Open the Tampermonkey dashboard. Use the switch to disable the script or the tra
 
 The script works only inside the open browser tab. It reads the comment already displayed by the Activity Manager and changes its presentation.
 
+It can only reveal text present in the page’s comment input. It cannot recover missing text or bypass TUMO access permissions.
+
 Version 1.0.4 was tested in Chrome. Other Chromium-based browsers, Firefox, and Safari have not yet been tested with this version. If TUMO changes the Activity Manager's page structure, the CSS selector may need an update.
 
 This independent project is not affiliated with or published by TUMO. TUMO is a trademark of its respective owners.
 
 ## Development test
 
+From a terminal with Git and Python 3 installed:
+
 ```bash
-python3 -m http.server 8000
+git clone https://github.com/pengusto/tumo-full-submission-comments.git
+cd tumo-full-submission-comments
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open `http://localhost:8000/test/fixture.html`. The page must display **Test passed** (`Test bestanden` in the fixture).
+Open `http://127.0.0.1:8000/test/fixture.html`. The page must display **Test passed** (`Test bestanden` in the fixture).
+
+The fixture loads the script directly; no TUMO login or Tampermonkey installation is needed. It checks multiple comments, empty fields, dynamically added comments, updates after a DOM change, and an unrelated read-only field. This local check does not verify installation through Tampermonkey or the current live TUMO interface.
 
 ## License
 

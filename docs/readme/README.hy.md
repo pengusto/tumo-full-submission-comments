@@ -1,10 +1,34 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../assets/comment-unfolding-paper-dark-v1.png">
+  <source media="(prefers-color-scheme: light)" srcset="../assets/comment-unfolding-paper-v2.png">
+  <img src="../assets/comment-unfolding-paper-v2.png" alt="Նկարազարդում․ պինգվինը բացում է խոսքի ամպիկը՝ ամբողջ մեկնաբանությունը ցուցադրելու համար։" width="2172" height="724">
+</picture>
+
 # TUMO Full Submission Comments
 
 [English](../../README.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [日本語](README.ja.md) | **Հայերեն**
 
-Փոքր userscript՝ TUMO Activity Manager-ի համար։ Այն ամբողջությամբ ցուցադրում է վերբեռնված ֆայլերի տակ կրճատված մեկնաբանությունները և երկար տեքստը բաժանում է մի քանի տողի։
+**Կարդացեք ամբողջ մեկնաբանությունը։ Շարունակեք գնահատումը։**
+
+Վերբեռնված աշխատանքները դիտող TUMO-ի գնահատողների համար այս փոքր userscript-ը Activity Manager-ում մեկ տողով կրճատված հանձնման մեկնաբանությունները դարձնում է ընթեռնելի՝ տողադարձերով։
 
 [Տեղադրել userscript-ը](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js)
+
+## Տարբերությունը՝ մեկ հայացքով
+
+| Առանց սկրիպտի | Սկրիպտով |
+| --- | --- |
+| Անիմացիան պատրաստ է։ Խնդրում եմ ստուգել… | Անիմացիան պատրաստ է։ Խնդրում եմ ստուգել վերջին տեսարանի ժամանակավորումը։ |
+
+Միայն ցուցադրական տեքստ է․ աշակերտների տվյալներ կամ TUMO-ի միջերեսի նյութեր չկան։
+
+## Սկսեք այստեղից
+
+1. Կարգավորեք Tampermonkey-ը՝ հետևելով [ստորև բերված դիտարկիչի հրահանգներին](#տեղադրում)։
+2. [Տեղադրեք userscript-ը](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js) և հաստատեք Tampermonkey-ում։
+3. Վերաբեռնեք examiner էջը և կարդացեք վերբեռնված ֆայլի տակ գտնվող երկար մեկնաբանությունը։
+
+Տեղադրման համար պետք չեն build, տերմինալ կամ TUMO-ի մուտքային տվյալներ։ Օգտագործելու համար անհրաժեշտ է ձեր գործող հասանելիությունը Activity Manager-ին։
 
 ## Ինչ է անում սկրիպտը
 
@@ -90,17 +114,25 @@ Userscript-ը հայտարարում է `@grant none`։ Այն չի օգտագո
 
 Սկրիպտն աշխատում է միայն բաց դիտարկիչի ներդիրում։ Այն կարդում է Activity Manager-ում արդեն ցուցադրված մեկնաբանությունը և փոխում միայն դրա տեսքը։
 
+Այն կարող է ցույց տալ միայն էջի մեկնաբանության դաշտում արդեն առկա տեքստը։ Այն չի վերականգնում բացակայող տեքստը և չի շրջանցում TUMO-ի հասանելիության թույլտվությունները։
+
 1.0.4 տարբերակը փորձարկվել է Chrome-ում։ Chromium-ի վրա հիմնված մյուս դիտարկիչները, Firefox-ը և Safari-ն այս տարբերակով դեռ գործնականում չեն փորձարկվել։ Եթե TUMO-ն փոխի Activity Manager-ի էջի կառուցվածքը, հնարավոր է անհրաժեշտ լինի թարմացնել CSS selector-ը։
 
 Այս անկախ նախագիծը կապված չէ TUMO-ի հետ և չի հրապարակվել TUMO-ի կողմից։ TUMO-ն համապատասխան իրավատերերի ապրանքանիշն է։
 
 ## Մշակման թեստ
 
+Git և Python 3 տեղադրված տերմինալում՝
+
 ```bash
-python3 -m http.server 8000
+git clone https://github.com/pengusto/tumo-full-submission-comments.git
+cd tumo-full-submission-comments
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Բացեք `http://localhost:8000/test/fixture.html` հասցեն։ Էջը պետք է ցուցադրի **Test bestanden**։
+Բացեք `http://127.0.0.1:8000/test/fixture.html` հասցեն։ Էջը պետք է ցուցադրի **Test bestanden**։
+
+Թեստային էջը սկրիպտը բեռնում է անմիջապես․ TUMO մուտք կամ Tampermonkey-ի տեղադրում պետք չէ։ Այն ստուգում է մի քանի մեկնաբանություն, դատարկ դաշտեր, դինամիկ ավելացված մեկնաբանություններ, DOM-ի փոփոխությունից հետո թարմացումներ և անկախ միայն կարդալու դաշտ։ Այս տեղային ստուգումը չի ստուգում Tampermonkey-ով տեղադրումը կամ TUMO-ի ընթացիկ առցանց միջերեսը։
 
 ## Լիցենզիա
 
