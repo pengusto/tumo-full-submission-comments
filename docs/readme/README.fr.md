@@ -1,10 +1,34 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../assets/comment-unfolding-paper-dark-v1.png">
+  <source media="(prefers-color-scheme: light)" srcset="../assets/comment-unfolding-paper-v2.png">
+  <img src="../assets/comment-unfolding-paper-v2.png" alt="Illustration : un pingouin déplie une bulle pour révéler un commentaire entier." width="2172" height="724">
+</picture>
+
 # TUMO Full Submission Comments
 
 [English](../../README.md) | [Deutsch](README.de.md) | **Français** | [日本語](README.ja.md) | [Հայերեն](README.hy.md)
 
-Un petit userscript pour TUMO Activity Manager. Il affiche en entier les commentaires tronqués sous les fichiers téléversés et répartit les textes longs sur plusieurs lignes.
+**Lire tout le commentaire. Poursuivre l’évaluation.**
+
+Pour les examinateurs TUMO qui consultent les travaux téléversés : ce petit userscript transforme les commentaires de soumission tronqués sur une seule ligne en texte lisible avec retour à la ligne dans Activity Manager.
 
 [Installer le userscript](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js)
+
+## La différence en un coup d’œil
+
+| Sans le script | Avec le script |
+| --- | --- |
+| L’animation est prête. Vérifiez… | L’animation est prête. Vérifiez le rythme de la dernière scène. |
+
+Texte illustratif uniquement ; aucune donnée d’élève ni ressource graphique de TUMO.
+
+## Commencer ici
+
+1. Configurez Tampermonkey avec les [instructions par navigateur ci-dessous](#installation).
+2. [Installez le userscript](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js) et confirmez dans Tampermonkey.
+3. Rechargez une page d’examen et lisez un long commentaire sous un fichier téléversé.
+
+L’installation ne nécessite ni compilation, ni terminal, ni identifiants TUMO. L’utilisation nécessite votre accès existant à Activity Manager.
 
 ## Fonctionnement du script
 
@@ -90,17 +114,25 @@ Ouvrez le tableau de bord Tampermonkey. Utilisez l'interrupteur pour désactiver
 
 Le script fonctionne uniquement dans l'onglet ouvert. Il lit le commentaire déjà affiché par Activity Manager et modifie sa présentation.
 
+Il ne peut révéler que le texte présent dans le champ de commentaire de la page. Il ne peut pas récupérer du texte manquant ni contourner les autorisations d’accès de TUMO.
+
 La version 1.0.4 a été testée dans Chrome. Les autres navigateurs basés sur Chromium, Firefox et Safari n'ont pas encore été testés avec cette version. Si TUMO modifie la structure de la page d'Activity Manager, le sélecteur CSS devra peut-être être mis à jour.
 
 Ce projet indépendant n'est ni affilié à TUMO ni publié par TUMO. TUMO est une marque de ses propriétaires respectifs.
 
 ## Test de développement
 
+Dans un terminal avec Git et Python 3 installés :
+
 ```bash
-python3 -m http.server 8000
+git clone https://github.com/pengusto/tumo-full-submission-comments.git
+cd tumo-full-submission-comments
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Ouvrez `http://localhost:8000/test/fixture.html`. La page doit afficher **Test bestanden**.
+Ouvrez `http://127.0.0.1:8000/test/fixture.html`. La page doit afficher **Test bestanden**.
+
+La page de test charge directement le script ; aucune connexion TUMO ni installation de Tampermonkey n’est nécessaire. Elle vérifie plusieurs commentaires, les champs vides, les commentaires ajoutés dynamiquement, les mises à jour après une modification du DOM et un champ en lecture seule indépendant. Ce contrôle local ne vérifie ni l’installation via Tampermonkey ni l’interface TUMO actuellement en ligne.
 
 ## Licence
 

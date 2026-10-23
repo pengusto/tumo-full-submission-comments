@@ -1,10 +1,34 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../assets/comment-unfolding-paper-dark-v1.png">
+  <source media="(prefers-color-scheme: light)" srcset="../assets/comment-unfolding-paper-v2.png">
+  <img src="../assets/comment-unfolding-paper-v2.png" alt="イラスト：ペンギンが吹き出しを広げてコメント全体を見せています。" width="2172" height="724">
+</picture>
+
 # TUMO Full Submission Comments
 
 [English](../../README.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | **日本語** | [Հայերեն](README.hy.md)
 
-TUMO Activity Manager 用の小さなユーザースクリプトです。アップロードされたファイルの下で省略されているコメントを、折り返して全文表示します。
+**コメントを最後まで読んで、評価を続ける。**
+
+アップロードされた作品を確認する TUMO の評価担当者向けです。この小さなユーザースクリプトは、Activity Manager で 1 行に省略される提出コメントを、折り返して読めるテキストに変えます。
 
 [ユーザースクリプトをインストール](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js)
+
+## 表示の違い
+
+| スクリプトなし | スクリプトあり |
+| --- | --- |
+| アニメーションが完成しました。最後の… | アニメーションが完成しました。最後のシーンのタイミングを確認してください。 |
+
+説明用のサンプル文です。生徒のデータや TUMO の画面素材は含みません。
+
+## まずはこちら
+
+1. [下のブラウザ別手順](#インストール)で Tampermonkey を設定します。
+2. [ユーザースクリプトをインストール](https://raw.githubusercontent.com/pengusto/tumo-full-submission-comments/main/tumo-full-submission-comments.user.js)し、Tampermonkey で確認します。
+3. examiner ページを再読み込みし、アップロードされたファイルの下にある長いコメントを読みます。
+
+インストールにビルド、ターミナル、TUMO のログイン情報は不要です。利用には、既存の Activity Manager へのアクセス権が必要です。
 
 ## このスクリプトの機能
 
@@ -90,17 +114,25 @@ Tampermonkey のダッシュボードを開きます。スイッチで無効化�
 
 このスクリプトは開いているブラウザタブ内だけで動作します。Activity Manager が表示済みのコメントを読み取り、その表示方法だけを変更します。
 
+表示できるのは、ページのコメント入力欄に存在するテキストだけです。欠けているテキストの復元や、TUMO のアクセス権限の回避はできません。
+
 バージョン 1.0.4 は Chrome でテスト済みです。その他の Chromium ベースのブラウザ、Firefox、Safari では、このバージョンの実機テストをまだ行っていません。TUMO が Activity Manager のページ構造を変更した場合は、CSS セレクターの更新が必要になることがあります。
 
 このプロジェクトは TUMO とは独立しており、TUMO による公開物ではありません。TUMO は各権利所有者の商標です。
 
 ## 開発用テスト
 
+Git と Python 3 がインストールされたターミナルで実行します。
+
 ```bash
-python3 -m http.server 8000
+git clone https://github.com/pengusto/tumo-full-submission-comments.git
+cd tumo-full-submission-comments
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-`http://localhost:8000/test/fixture.html` を開きます。ページに **Test bestanden** と表示されれば成功です。
+`http://127.0.0.1:8000/test/fixture.html` を開きます。ページに **Test bestanden** と表示されれば成功です。
+
+テストページはスクリプトを直接読み込むため、TUMO へのログインや Tampermonkey のインストールは不要です。複数のコメント、空欄、動的に追加されたコメント、DOM 変更後の更新、無関係な読み取り専用欄を確認します。このローカル確認では、Tampermonkey 経由のインストールや現在の TUMO の画面は検証しません。
 
 ## ライセンス
 
